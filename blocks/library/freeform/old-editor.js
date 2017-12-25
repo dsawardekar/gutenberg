@@ -5,12 +5,6 @@ import { Component } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import { keycodes } from '@wordpress/utils';
 
-/**
- * Internal dependencies
- */
-import InspectorControls from '../../inspector-controls';
-import BlockDescription from '../../block-description';
-
 const { BACKSPACE, DELETE } = keycodes;
 
 function isTmceEmpty( editor ) {
@@ -180,13 +174,6 @@ export default class OldEditor extends Component {
 		const { focus, id } = this.props;
 
 		return [
-			focus && (
-				<InspectorControls key="inspector">
-					<BlockDescription>
-						<p>{ __( 'The classic editor, in block form.' ) }</p>
-					</BlockDescription>
-				</InspectorControls>
-			),
 			<div
 				key="toolbar"
 				id={ id + '-toolbar' }
