@@ -12,7 +12,7 @@ import { PanelBody, PanelRow } from '@wordpress/components';
 /**
  * Internal dependencies
  */
-import { PageAttributesCheck, PageAttributesOrder } from '../../../components';
+import { PageAttributesCheck, PageAttributesOrder, PageAttributesParent } from '../../../components';
 import { toggleSidebarPanel } from '../../../store/actions';
 import { isEditorSidebarPanelOpened } from '../../../store/selectors';
 
@@ -29,6 +29,9 @@ export function PageAttributes( { isOpened, onTogglePanel } ) {
 				opened={ isOpened }
 				onToggle={ onTogglePanel }
 			>
+				<PanelRow>
+					<PageAttributesParent />
+				</PanelRow>
 				<PanelRow>
 					<PageAttributesOrder />
 				</PanelRow>
